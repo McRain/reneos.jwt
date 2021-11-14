@@ -1,6 +1,6 @@
 {
   "name": "webjwt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Microservice for encode/decode jwt",
   "main": "app.js",
 	"type": "module",
