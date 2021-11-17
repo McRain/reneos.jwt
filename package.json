@@ -1,6 +1,6 @@
 {
   "name": "webjwt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Microservice for encode/decode jwt",
   "main": "app.js",
 	"type": "module",
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
 	"dependencies": {
-		"@reneos/server": "0.1.0",
+		"@reneos/server": "0.1.2",
 		"jsonwebtoken": "8.5.1"
 	}
 }
