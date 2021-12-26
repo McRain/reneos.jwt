@@ -22,7 +22,15 @@ WebServer.AddRoute(web.decodepath, req => {
 	 */
 	const { secret, data } = req.body || req.query
 	return new Promise(resolve => {
-		jsonwebtoken.verify(data.trim(), secret || jwt.default_secret, (err, decoded) => resolve(err?{}:decoded));
+		let value = ""
+		try{
+			value = data.trim()
+			jsonwebtoken.verify(value, secret || jwt.default_secret, (err, decoded) => resolve(err?{}:decoded));
+		}catch(e){
+			//console.warn(`Error read entry data for decode`)
+			resolve({})
+		}
+		
 	})
 })
 
